@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pro-Ahimsa</title>
+<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+<script>
+$(document).ready(function(){
+						   var content = $("#content");
+						   
+						   $("a").click(function(){
+												   switch(this.id){
+													   case "back":
+													   	content.fadeOut(1)
+														content.load("rezepte.html");
+														content.fadeIn(800);
+													   break;
+													   
+													   case "next":
+													   	content.fadeOut(1)
+														content.load("aenlich.html");
+														content.fadeIn(800);
+													   break;
+							
+												   }
+												   });
+						   });
+</script>
+<style type="text/css">
+<!--
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+a   {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #858585;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+-->
+</style>
+</head>
+<body>
+<div style="text-align:left; width:780px; padding:10px; display:block;">
+<h2 align="center">Ethik &amp; Bewusstein</h2><br />
+	<div>
+		<img src="images/gallery/rotating-logo-9.png" width="778" height="98" />
+	</div>
+<br />
+<h3>Worauf beruhen Ethik und Moral?</h3>
+<br />
+<p>Unsere moralischen Empfindungen beruhen auf Voraussetzungen, die urspr&uuml;nglich im Tierreich entstanden sind: F&uuml;rsorge und Liebe, die Entwicklung sozialer Spielregeln und schließlich auch Einf&uuml;hlungsverm&ouml;gen (Empathie). Laut Arthur Schopenhauer ist das <strong>Mitgef&uuml;hl die Grundlage moralischen Handels</strong>. Die Gabe sich in die Situation anderer Gesch&ouml;pfe hinein zu versetzten und mit ihnen zu f&uuml;len. Zeigen wir Mitleid mit unserem Gegen&uuml;ber, wird es uns schwer fallen ihn zu kr&auml;nken, verletzten oder gar zu t&ouml;ten.
+<br />
+Wer kennt nicht das altbekannt Sprichwort:<br />
+<br /><div align="center"><em><strong>„Was du nicht willst das man dir tut, das f&uuml;g´ auch keinem Anderen zu.“</strong></em></div>
+<br />
+Bereits in der Antike war Ethik eine philosophische Disziplin. Mit der zugrunde liegenden Auffassung, dass es für ein Vernunftwesen wie den Menschen unangemessen sei, wenn dessen Handeln ausschließlich von Konventionen, Traditionen oder gar niederen Trieben geleitet wird.<br />
+
+<br /><div align="center"><img src="images/gallery/ethik/gefuehle.jpg" alt="ethik" width="600" height="150" /></div>
+<br />
+<h3>... richtiges Handeln</h3>
+<br />
+Was wir f&uuml;r richtig oder Falsch erachten, ist eine subjektive Sache, die jeder f&uuml;r sich selbst beantworten muss. Doch gibt es gewisse Dinge, die man, als normaler, vern&uuml;nftiger Mensch ablehnt, wie zum Beispiel Mord und Gewalt.<br />
+Doch in unserer heutigen Welt, im 21. Jahrhundert, ist es nicht leicht zu erkennen, hinter welchen Dingen sich Gewalt und Mord verstecken.<br />
+Wenn man mit offenen Augen durch die Welt geht, wird man mit Entsetzen feststellen, dass es garnicht so leicht ist nicht f&uuml;r Mord und Gewalt zu bezahlen!<br />
+<br />
+<div align="center">&rArr;Will man versuchen einen friedlichen Weg zu gehen, so lautet der Weg: <em><strong>Gewaltlosigkeit &ndash; Ahimsa</strong></em></div>
+</p>
+</div>
+<a id="back"><img src="images/back.png" alt="Back" width="75" height="61" style="float:left; margin-left:10px;"  /></a>
+<a id="next"><img src="images/next.png" alt="Next" width="75" height="61" alt="next" style="float:right; margin-right:10px;" /></a>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});</script>
+</body>
+</html>

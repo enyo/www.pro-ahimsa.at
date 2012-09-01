@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pro-Ahimsa</title>
+<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+<script>
+$(document).ready(function(){
+						   var content = $("#content");
+						   
+						   $("a").click(function(){
+												   switch(this.id){
+													   case "back":
+													   	content.fadeOut(1)
+														content.load("tierprodukte.html");
+														content.fadeIn(800);
+													   break;
+													   
+													   case "next":
+													   	content.fadeOut(1)
+														content.load("umwelt.html");
+														content.fadeIn(800);
+													   break;
+							
+												   }
+												   });
+						   });
+</script>
+<style type="text/css">
+<!--
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+a   {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #858585;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+-->
+</style>
+</head>
+<body>
+<div style="text-align:left; width:780px; padding:10px; display:block;">
+<h2 align="center">Sklaven- &amp; Kinderarbeit</h2><br />
+	<div>
+		<img src="images/gallery/rotating-logo-3.png" width="778" height="98" />
+	</div>
+    <p><br />
+<h3>Fakten</h3><br />
+Sklaven-, Kinder- und Zwangsarbeit ist gerade in unserem Jahrhundert noch immer <strong>eines der größten globalen Probleme</strong>. Es gibt etwa 218 Millionen Kinderarbeiter unter 15 Jahren, davon 90% unter ausbeuterischen Bedingungen, in bitterer Armut. Sie werden gezwungen täglich bis zu 18 Stunden zu arbeiten und haben nicht einmal genug zu essen.<br />
+<br />
+Die ausgebeuteten Menschen, überwiegend Mädchen und Frauen, führen ein Leben der Erniedrigung und des Elends. Sie werden ihrer Rechte beraubt, müssen ein Leben lange unter katastrophalen, oft lebensgefährlichen Umständen ihre Arbeit verrichten. Sie werden oft geschlagen, gezwungen vom Aufstehen bis zum Schlafen gehen zu arbeiten, bekommen kaum Essen oder werden manchmal auch sexuell missbraucht.<br />
+Doch die Produkte die sie herstellen, landen zuhauf in den Regalen unserer Kaufhäuser, bedeckt von einem unsichtbaren Mantel aus dem Leid und Elend der Arbeiter.<br /><br />
+<h3>Wieso gibt es diese verbotene Art der Sklaverei?</h3><br />
+Kinder- und Zwangsarbeit ist kein hausgemachtes Problem. Im Gegenteil. Der Grund der bitteren Armut wird fast immer durch die rücksichtslose Konzernpolitik, der großen und bekannten Firmen verschuldet.<br />
+Oftmals haben Menschenrechtsorganisationen diese Konzerne verklagt, weil sie wissentlich billige Rohstoffe und Produkte kauften, die von Kindersklaven oder Zwangsarbeitern gefördert oder produziert wurden. Aber geändert hat sich erst sehr wenig, denn gegen die mächtigsten Firmen wie „Nestlé“, „Brigdestone Firestone“, „Archer Daniels Midland“, „Cargill“ oder den Ölmluti „Exxon Mobil“ kann sich nicht einmal die Politik behaupten – und das Schlimmste dieser Misere: <strong>Wir kaufen diese Produkte</strong>. Zwar tun wir das meist unbewusst, aber leider ist unser Verlangen nach günstiger Ware der Grund, weshalb sich die Konzerne nicht ändern.
+<br />   
+<br />Es ist beinahe unmöglich, sich in dem Gewirr verwickelter Firmen und der undurchsichtigen Komplexität dieser Problematik, zurecht zu finden. Dennoch gibt es gewisse Dinge, die wir tun können.<br />
+<br /><h3>Alternativen</h3>
+<br />Heimisch produzierter Ware kann man im Normalfall vertrauen. Bei Artikeln wie Kaffee, Schokolade und Kakao, kann man Produkte aus fairem Handel kaufen.<br />
+Folgende Siegel stehen für faire Arbeitsverhältnisse und deren Kontrolle:</p>
+<div align="center"><p align="center">
+<table width="490" border="0" cellspacing="1">
+  <tr>
+    <td><img src="images/gallery/sklaven/Rainforrest Alliance.png" alt="rainforrest alliance" /></td>
+    <td><img src="images/gallery/sklaven/fairtrade.jpg" alt="fairtrade" /></td>
+    <td><img src="images/gallery/sklaven/UTZ-Zertifikat.png" alt="UTZ Zertifikat" /></td>
+  </tr>
+</table>
+
+</div>
+</div>
+<a id="back"><img src="images/back.png" alt="Back" width="75" height="61" style="float:left; margin-left:10px;"  /></a>
+<a id="next"><img src="images/next.png" alt="Next" width="75" height="61" alt="next" style="float:right; margin-right:10px;" /></a>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});</script>
+</body>
+</html>

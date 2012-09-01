@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+<script>
+$(document).ready(function(){
+						   var content = $("#content");
+						   
+						   $("a").click(function(){
+												   switch(this.id){
+													   case "back":
+													   	content.fadeOut(1)
+														content.load("geschichten.html");
+														content.fadeIn(800);
+													   break;
+													   
+													   case "next":
+													   	content.fadeOut(1)
+														content.load("interview.html");
+														content.fadeIn(800);
+													   break;
+							
+												   }
+												   });
+						   });
+</script>
+<style type="text/css">
+<!--
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+a   {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #858585;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+-->
+</style>
+</head>
+<body>
+<div style="text-align:left; width:780px; padding:10px; display:block;">
+<h2 align="center">Yoga &amp; Spiritualit&auml;t</h2><br />
+	<div>
+		<img src="images/gallery/rotating-logo-17.png" width="778" height="98" />
+	</div>
+<p><br />Gem&auml;ß dem Yoga ist dies das oberste Gebot der Menschheit. Im Westen assoziiert man mit Yoga oft K&ouml;rperübungen (Asanas). Doch ist <strong>Yoga im Ursprung eine Wissenschaft</strong>, die weit mehr als K&ouml;rper&uuml;bungen umfasst. Yoga lehrt uns im Einklang mit den Gesetzen der Natur und des Kosmos zu sein.<br />
+<br />
+Das Unreine, beispielsweise negative Gedanken oder Gef&uuml;hle, Unrecht und Gewalt werden abgelehnt. Yoga lehrt uns, in Frieden und mit Respekt und Toleranz allen Lebewesen gegen&uuml;ber zu leben. <strong>Ahimsa (Gewaltlosigkeit) ist die Grundlage für ein spirituelles Leben.</strong><br />
+<br />
+<div align="center"><img src="images/gallery/yoga/ahimsa-alt.jpg" alt="ahimsa" /></div>
+</p>
+</div>
+<a id="back"><img src="images/back.png" alt="Back" width="75" height="61" style="float:left; margin-left:10px;"  /></a>
+<a id="next"><img src="images/next.png" alt="Next" width="75" height="61" alt="next" style="float:right; margin-right:10px;" /></a>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});</script>
+</body>
+</html>

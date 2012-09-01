@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pro-Ahimsa</title>
+
+<style type="text/css">
+<!--
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+a   {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #858585;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+-->
+</style>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script></head>
+<body>
+<h2 align="center">Newsletter abonieren</h2>
+<div align="center"><br />
+</div>
+<p align="center">Bitte geben Sie Ihre gültige Email-Adresse ein, damit wir ihnen unseren Newsletter zukommen lassen können.<br />
+<br />
+Wir informieren sie über neue Events, Pro-Ahimsa-Konzerte und behalten ihre Emailadresse vertraulich. Eine weitergabe an Dritte erfolgt nicht. ... unser Newsletter erscheint zur Zeit nur wenige Male im Jahr.<br />
+<br />
+<strong>Aufgrund eines Serverproblems können wir ihre Emailadresse derzeit leider nicht erhalten. In wenigen Tagen funktioniert es wieder.</strong></p>
+
+
+<div style="text-align:center; width:780px; padding:10px; display:block;">
+  <div id="submitemailbox" style="margin-top:50px;">
+<form action="newsletter/contactformprocess.php" method="post" name="form1">
+  <label for="email">Newsletter abonieren</label>
+  <span id="sprytextfield1">
+  <input type="text" name="email" id="email" />
+  <span class="textfieldRequiredMsg">Bitte eine g&uuml;ltige E-Mail Adresse eingeben!</span><span class="textfieldInvalidFormatMsg">Bitte eine g&uuml;ltige E-Mail Adresse eingeben!</span></span>
+  <input type="submit" name="submitemail" id="submitemail" value="Abschicken" />
+</form>
+  </div>
+</div>
+<br /><br /><br />
+<p><strong>Newsletter abbestellen:</strong> Bitte schicken sie uns einfach eine Email an <a href="mailto:pro-ahimsa@gmx.at">office@pro-ahimsa.at</a> mit dem Betreff &quot;Newsletter abbestellen&quot;.</p>
+
+<script type="text/javascript">
+<!--
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "email");
+//-->
+  </script>
+</body>
+</html>
