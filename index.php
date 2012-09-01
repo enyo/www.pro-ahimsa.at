@@ -1,3 +1,22 @@
+<?php
+
+  function siteFile($site) {
+    return __DIR__ . "/sites/$site.html";
+  }
+
+  if (isset($_GET['site'])) {
+    $site = preg_replace("/[^\w]/", "", $_GET['site']);
+    if (!is_file(siteFile($site))) $site = null;
+  }
+
+  if (!$site) $site = "aktuelles";
+
+  $siteContent = file_get_contents(siteFile($site));
+
+  if (isset($_GET['onlyContent'])) {
+    die($siteContent);
+  }
+?>
 <!doctype html>
 <html>
 <head>
@@ -21,57 +40,59 @@
   <div id="box">
 
     <div id="top">
-      <a id="newsletter">Newsletter</a> |
-      <a id="downloads">Downloads</a> |
-      <a id="links">Links</a> |
-      <a id="about">About</a> |
-      <a id="impressum">Impressum</a>
+      <a href="?site=newsletter">Newsletter</a> |
+      <a href="?site=downloads">Downloads</a> |
+      <a href="?site=links">Links</a> |
+      <a href="?site=about">About</a> |
+      <a href="?site=impressum">Impressum</a>
     </div>
     <div id="logo"><a href="index.html"><img src="images/headerlogo.png" width="1044" height="115" alt="logo" /></a></div>
     
-    <div id="content"></div>
+    <div id="content"><?php echo $siteContent; ?></div>
 
     <div id="menu">
        <ul id="MenuBar1" class="MenuBarVertical">
-        <li id="aktueles"><a>Aktuelles</a></li>
-        <li><a id="gewaltlos" class="MenuBarItemSubmenu">Gewaltlosigkeit im 21 Jh.</a>
+        <li><a href="?site=aktuelles">Aktuelles</a></li>
+        <li>
+          <a href="?site=gewaltlos" class="MenuBarItemSubmenu">Gewaltlosigkeit im 21 Jh.</a>
           <ul>
-            <li id="tierprodukte"><a>Tierprodukte</a></li>
-            <li id="sklaven"><a>Sklaven &amp; Kinderarbeit</a></li>
-            <li id="umwelt"><a>Umweltschutz</a></li>
-            <li id="gesund"><a>Unsere Gesundheit</a></li>
+            <li><a href="?site=tierprodukte">Tierprodukte</a></li>
+            <li><a href="?site=sklaven">Sklaven &amp; Kinderarbeit</a></li>
+            <li><a href="?site=umwelt">Umweltschutz</a></li>
+            <li><a href="?site=gesund">Unsere Gesundheit</a></li>
           </ul>
         </li>
-        <li><a id="umsetzung" class="MenuBarItemSubmenu">Umsetzung</a>
+        <li><a href="?site=umsetzung" class="MenuBarItemSubmenu">Umsetzung</a>
           <ul>
-            <li id="alternativen"><a>Gewaltfreie Alternativen</a></li>
-            <li id="rezepte"><a>Kochen / Rezepte</a></li>
+            <li><a href="?site=alternativen">Gewaltfreie Alternativen</a></li>
+            <li><a href="?site=rezepte">Kochen / Rezepte</a></li>
           </ul>
         </li>
-        <li><a id="ethik" class="MenuBarItemSubmenu">Ethik &amp; Bewusstsein</a>
+        <li>
+          <a href="?site=ethik" class="MenuBarItemSubmenu">Ethik &amp; Bewusstsein</a>
           <ul>
-            <li id="aenlich"><a>Wie &auml;hnlich sind uns Tiere?</a></li>
-            <li id="recht"><a>Das Recht zu T&ouml;ten</a></li>
-            <li id="promi"><a>Prominente Veggies</a></li>
+            <li><a href="?site=aehnlich">Wie &auml;hnlich sind uns Tiere?</a></li>
+            <li><a href="?site=recht">Das Recht zu T&ouml;ten</a></li>
+            <li><a href="?site=promi">Prominente Veggies</a></li>
           </ul>
         </li>
-        <li><a id="faszinierend" class="MenuBarItemSubmenu">Faszination Tiere</a>
+        <li><a href="?site=faszinierend" class="MenuBarItemSubmenu">Faszination Tiere</a>
           <ul>
-            <li id="fuehlen"><a>Was Tiere f&uuml;hlen</a></li>
-            <li id="media"><a>Videos &amp; Bilder</a></li>
-            <li id="geschichten"><a>Einzigartige Geschichten </a></li>
+            <li><a href="?site=fuehlen">Was Tiere f&uuml;hlen</a></li>
+            <li><a href="?site=media">Videos &amp; Bilder</a></li>
+            <li><a href="?site=geschichten">Einzigartige Geschichten </a></li>
           </ul>
         </li>
-        <li><a id="yoga" class="MenuBarItemSubmenu">Yoga &amp; Spiritualit&auml;t</a>
+        <li><a href="?site=yoga" class="MenuBarItemSubmenu">Yoga &amp; Spiritualit&auml;t</a>
           <ul>
-            <li id="interview"><a >Interview eines Yogi</a></li>
-            <li id="philosophie"><a >Yoga Philosophie</a></li>
+            <li><a href="?site=interview">Interview eines Yogi</a></li>
+            <li><a href="?site=philosophie">Yoga Philosophie</a></li>
           </ul>
         </li>
-        <li><a id="archiv" class="MenuBarItemSubmenu">Media</a>
+        <li><a href="?site=archiv" class="MenuBarItemSubmenu">Media</a>
           <ul>
-            <li id="media"><a >Videos &amp; Bilder</a></li>
-            <li id="pdfs"><a >PDFs</a></li>
+            <li><a href="?site=media">Videos &amp; Bilder</a></li>
+            <li><a href="?site=pdfs">PDFs</a></li>
           </ul>
         </li>
        </ul>
