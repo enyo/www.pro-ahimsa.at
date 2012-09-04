@@ -6,6 +6,11 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-size: 14px;
+  font-family: arial, tahoma, sans-serif;
+  color: #000;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 135%;
 }
 * {
   margin: 0px;
@@ -17,6 +22,26 @@ img {
   border-left-style: none;
 }
 
+h1 {
+  margin: 30px 0;
+  font-size: 1.8em;
+  line-height: 135%;
+}
+h2 {
+  margin: 20px 0;
+  font-size: 1.5em;
+  line-height: 135%;
+}
+h3 {
+  margin: 15px 0;
+  font-size: 1.3em;
+  line-height: 135%;
+}
+
+
+p {
+  margin: 20px 0;
+}
 
 #box {
   width: 1044px;
@@ -36,7 +61,6 @@ img {
   color: #858585;
   text-align: right;
   padding-top: 4px;
-  font-size: 14px;
   word-spacing: 10px;
 }
 
@@ -50,17 +74,18 @@ img {
 #box #menu {
   float: left;
   width: 210px;
-  background-color: #666;
+  color: #444;
 }
 #box #content {
-  width: 800px;
+  width: 740px;
   min-height: 400px;
   float: right;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11pt;
-  padding-bottom: 20px;
   background-image: url(../images/bgcontent.png);
   background-repeat: repeat;
+  padding: 30px;
+  border-radius: 3px;
 }
 #box #spacer {
   height: 30px;
@@ -92,15 +117,54 @@ img {
   margin-right: -800px;
 }
 #box #top a {
-  font-family: Arial, Helvetica, sans-serif;
   color: #858585;
   font-size: 14px;
   text-decoration: none;
 }
 #box #top a:hover {
-  font-family: Arial, Helvetica, sans-serif;
   color: #CCC;
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
 }
+
+
+#content h1 {
+  text-align: center;
+}
+#content h1:first-child {
+  margin-top: 0;
+}
+
+
+#content .links {
+  height: 61px;
+  margin: 30px 0 10px 0;
+  position: relative;
+}
+
+#content .links .back,
+#content .links .next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 75px;
+  height: 61px;
+}
+
+#content .links .back {
+  background: url("../images/back.png") no-repeat left top;
+  left: 10px;
+}
+#content .links .back span {
+  display: none;
+}
+
+#content .links .next {
+  background: url("../images/next.png") no-repeat left top;
+  right: 10px;
+}
+#content .links .next span {
+  display: none;
+}
+

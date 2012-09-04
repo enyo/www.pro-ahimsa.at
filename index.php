@@ -1,22 +1,4 @@
-<?php
-
-  function siteFile($site) {
-    return __DIR__ . "/sites/$site.html";
-  }
-
-  if (isset($_GET['site'])) {
-    $site = preg_replace("/[^\w]/", "", $_GET['site']);
-    if (!is_file(siteFile($site))) $site = null;
-  }
-
-  if (!$site) $site = "aktuelles";
-
-  $siteContent = file_get_contents(siteFile($site));
-
-  if (isset($_GET['onlyContent'])) {
-    die($siteContent);
-  }
-?>
+<?php require(__DIR__ . "/includes/ini.php") ?>
 <!doctype html>
 <html>
 <head>
@@ -62,7 +44,8 @@
             <li><a href="?site=gesund">Unsere Gesundheit</a></li>
           </ul>
         </li>
-        <li><a href="?site=umsetzung" class="MenuBarItemSubmenu">Umsetzung</a>
+        <li>
+          <a href="?site=umsetzung" class="MenuBarItemSubmenu">Umsetzung</a>
           <ul>
             <li><a href="?site=alternativen">Gewaltfreie Alternativen</a></li>
             <li><a href="?site=rezepte">Kochen / Rezepte</a></li>
@@ -76,20 +59,23 @@
             <li><a href="?site=promi">Prominente Veggies</a></li>
           </ul>
         </li>
-        <li><a href="?site=faszinierend" class="MenuBarItemSubmenu">Faszination Tiere</a>
+        <li>
+          <a href="?site=faszinierend" class="MenuBarItemSubmenu">Faszination Tiere</a>
           <ul>
             <li><a href="?site=fuehlen">Was Tiere f&uuml;hlen</a></li>
             <li><a href="?site=media">Videos &amp; Bilder</a></li>
             <li><a href="?site=geschichten">Einzigartige Geschichten </a></li>
           </ul>
         </li>
-        <li><a href="?site=yoga" class="MenuBarItemSubmenu">Yoga &amp; Spiritualit&auml;t</a>
+        <li>
+          <a href="?site=yoga" class="MenuBarItemSubmenu">Yoga &amp; Spiritualit&auml;t</a>
           <ul>
             <li><a href="?site=interview">Interview eines Yogi</a></li>
             <li><a href="?site=philosophie">Yoga Philosophie</a></li>
           </ul>
         </li>
-        <li><a href="?site=archiv" class="MenuBarItemSubmenu">Media</a>
+        <li>
+          <a href="?site=archiv" class="MenuBarItemSubmenu">Media</a>
           <ul>
             <li><a href="?site=media">Videos &amp; Bilder</a></li>
             <li><a href="?site=pdfs">PDFs</a></li>

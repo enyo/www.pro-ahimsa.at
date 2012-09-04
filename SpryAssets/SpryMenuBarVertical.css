@@ -18,7 +18,9 @@ ul.MenuBarVertical
 	list-style-type: none;
 	font-size: 100%;
 	cursor: default;
-	width: 200px;
+	width: 210px;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	border-radius: 3px;
 }
 /* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
 ul.MenuBarActive
@@ -54,6 +56,9 @@ ul.MenuBarVertical ul
 	margin-bottom: 0;
 	margin-left: 100%;
 	opacity: 0.9;
+	background: #E8E4C1;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	border-radius: 3px;
 }
 /* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
 ul.MenuBarVertical ul.MenuBarSubmenuVisible
@@ -75,6 +80,9 @@ ul.MenuBarVertical ul li
 /* Outermost menu container has borders on all sides */
 ul.MenuBarVertical
 {
+	background-color: #F7F6D1;
+	background: #E8E4C1;
+	padding 
 
 }
 /* Submenu containers have borders on all sides */
@@ -87,24 +95,32 @@ ul.MenuBarVertical a
 {
 	display: block;
 	cursor: pointer;
-	background-color: #54281D;
+	/*background-color: #54281D;*/
+	/*background-color: transparent;*/
+	/*background-color: #F7F6D1;*/
 	padding: 0.5em 0.75em;
-	color: #FFF;
+	color: black;
+	color: rgba(0, 0, 0, 0.7);
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
-	font-size: 12pt;
+	font-size: 14px;
+
 }
 /* Menu items that have mouse over or focus have a blue background and white text */
 ul.MenuBarVertical a:hover, ul.MenuBarVertical a:focus
 {
 	background-color: #165809;
+	background-color: #54281D;
+	border-radius: 3px;
 	color: #FFF;
 }
 /* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
 ul.MenuBarVertical a.MenuBarItemHover, ul.MenuBarVertical a.MenuBarItemSubmenuHover, ul.MenuBarVertical a.MenuBarSubmenuVisible
 {
 	background-color: #165809;
+	background-color: #54281D;
+	border-radius: 3px;
 	color: #FFF;
 }
 
